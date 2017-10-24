@@ -182,9 +182,9 @@ void getWeatherData() {
   }
   outTemp = root["main"]["temp"];
   outHumidity = root["main"]["humidity"];
-  weatherId = root["weather"]["id"].asString();
+  weatherId = root["weather"]["id"];
    
-  if (isnan(outTemp) || outTemp < -50 || outTemp > 50) {
+  if (isnan(outTemp) || outTemp < -50 || outTemp > 50 || isnan(weatherId)) {
     return;
   }
 
@@ -208,14 +208,14 @@ void getWeatherData() {
   tft.setTextFont(0);
   tft.print(String(outHumidity) + "%");
 
-  if (weatherId.toInt() != lastWeatherId) {
-    lastWeatherId = weatherId.toInt();
-    printWeatherIcon(weatherId.toInt());
+  if (weatherId != lastWeatherId) {
+    lastWeatherId = weatherId;
+    printWeatherIcon(weatherId);
   }
 }
 
 void printWeatherIcon(int id) {
-  tft.fillRect(0, 0, 85, CLOCK_Y_POS - 5, BLACK);
+  tft.fillRect(0, 0, 88, CLOCK_Y_POS - 1, BLACK);
   switch(id) {
     case 800: 
       drawClearWeather();
