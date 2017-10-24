@@ -26,8 +26,8 @@
 const int DHT_PIN = D1; 
 const int DHT_TYPE = DHT22;
  
-const char* WIFI_SSID = "**********";
-const char* WIFI_PASSWD = "**********************";
+const char* WIFI_SSID = "***";
+const char* WIFI_PASSWD = "*****";
 
 TimeChangeRule EEST = {"EEST", Last, Sun, Mar, 3, 180};  //Daylight time = UTC + 3 hours
 TimeChangeRule EET = {"EET", Last, Sun, Nov, 4, 120}; //Standard time = UTC + 2 hours
@@ -84,7 +84,7 @@ DHT dht(DHT_PIN, DHT_TYPE);
 int lastWeatherId;
 int outHumidity;
 float outTemp;
-String weatherId;
+int weatherId;
 
 float intTemp;
 float intHumidity;
