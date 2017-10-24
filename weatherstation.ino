@@ -27,7 +27,7 @@ const int DHT_PIN = D1;
 const int DHT_TYPE = DHT22;
  
 const char* WIFI_SSID = "***";
-const char* WIFI_PASSWD = "*****";
+const char* WIFI_PASSWD = "***";
 
 TimeChangeRule EEST = {"EEST", Last, Sun, Mar, 3, 180};  //Daylight time = UTC + 3 hours
 TimeChangeRule EET = {"EET", Last, Sun, Nov, 4, 120}; //Standard time = UTC + 2 hours
@@ -37,7 +37,7 @@ TimeChangeRule *tcr;
 const int NTP_PACKET_SIZE = 48; // NTP time stamp is in the first 48 bytes of the message
 byte ntpPacketBuffer[NTP_PACKET_SIZE];
 
-const char* NTP_SERVER = "time.nist.gov";
+const char* NTP_SERVER = "pool.ntp.org";
 const int NTP_CLIENT_PORT = 2390;
 const int NTP_SERVER_PORT = 123;
 const int NTP_SERVER_RETRY_DELAY = 16000;
