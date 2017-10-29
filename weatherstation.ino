@@ -30,7 +30,7 @@ const char* WIFI_SSID = "***";
 const char* WIFI_PASSWD = "***";
 
 TimeChangeRule EEST = {"EEST", Last, Sun, Mar, 3, 180};  //Daylight time = UTC + 3 hours
-TimeChangeRule EET = {"EET", Last, Sun, Nov, 4, 120}; //Standard time = UTC + 2 hours
+TimeChangeRule EET = {"EET", Last, Sun, Oct, 4, 120}; //Standard time = UTC + 2 hours
 Timezone CE(EEST, EET);
 TimeChangeRule *tcr; 
 
